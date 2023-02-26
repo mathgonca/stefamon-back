@@ -16,7 +16,7 @@ import java.util.List;
 public class GenericDAO<T, I>  {
 
     @PersistenceContext(unitName = "PU")
-    EntityManager em;
+    public EntityManager em;
     
     Class<T> clazz;
 
