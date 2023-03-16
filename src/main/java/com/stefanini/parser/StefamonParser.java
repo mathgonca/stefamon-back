@@ -1,13 +1,22 @@
 package com.stefanini.parser;
 
-import com.stefanini.dto.StefamonDTO;
+import com.stefanini.dto.stefamon.StefamonResponse;
 import com.stefanini.entity.Stefamon;
 
 public class StefamonParser {
 
-    public static Stefamon DtotoEntity(StefamonDTO dto) {
-        Stefamon stefamon = new Stefamon();
-        return stefamon;
+    public static StefamonResponse entityToDTO(Stefamon stefamon) {
+        return new StefamonResponse(
+                stefamon.getId(),
+                stefamon.getNome(),
+                stefamon.getVida(),
+                stefamon.getAtaque(),
+                stefamon.getDefesa(),
+                stefamon.getInteligencia(),
+                stefamon.getPoder(),
+                stefamon.getVelocidade(),
+                stefamon.getUrlFoto()
+        );
     }
 
 }
